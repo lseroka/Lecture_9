@@ -20,4 +20,7 @@ params = {'q':'food'}
 r = oauth.get(protected_url, params=params)
 twitter = json.loads(r.text)
 
-print(twitter)
+for x in twitter ['statuses']:
+	print (x['user']['name'])
+	print(x['text'])
+	print("----------------")
